@@ -71,3 +71,10 @@ Resnet-101도 충분히 깊은 모델인데 거기서 나온 특성값을 또 �
 # FPN의 대표 구조 3가지
 
 1.Bottom-up Pathway
+- ResNet을 통해 Feature Map을 생성함. 그 이후에 Feature Map은 FPN의 Bottom-up pathway를 통해 처리 됨.
+
+Bottom-up pathway에서는 입력 이미지에서 상세한 특징을 추출하여 다양한 해상도와 크기의 Feature Map을 생성하는 과정임.
+
+즉, 객체의 크기와 위치에 대한 정보를 더욱 정확하게 파악하는 과정임.
+
+2. 
