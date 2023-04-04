@@ -38,4 +38,11 @@ weight를 증가시켜 학습을 집중합니다. focal Loss의 효율성을 위
 
 ResNet을 통해 객체의 특징을 추출하고 이후의 별도의 모듈을 사용하여 객체의 위치와 클래스를 예측합니다.
 
+즉, backbone(ResNet-101)에서는 Convolutional feature map을 추출합니다. 그리고 다음 Network로는 subnet network를 통해 object classification을 수행하고 두번째 subnet
+
+에서는 boudning box regression을 수행합니다.
+
+![image](https://user-images.githubusercontent.com/104436260/229718950-646ca4d8-43b9-4649-ab3b-86f915f6c056.png)
+
+
 
