@@ -62,8 +62,12 @@ Resnet-101도 충분히 깊은 모델인데 거기서 나온 특성값을 또 �
 
 ![image](https://user-images.githubusercontent.com/104436260/229720661-a4e2fb9e-e21f-44c2-a1c6-dcb024380185.png)
 
-1. FPN은 임의의 크기 이미지를 입력 받고 fully convolutional 방법으로 다양한 단계의 적합한 크기의 feature map을 출력한다
+=> FPN은 임의의 크기 이미지를 입력 받고 fully convolutional 방법으로 다양한 단계의 적합한 크기의 feature map을 출력한다
 
 여기서 fully convolutional은 모든 레이어가 합성공으로만 이루어진 모델이라고 하는데 마지막에 Fully connected를 해주지 않고
 
 모든 픽셀위치의 출력값을 생성한다는 점이 특징이다. Fully connected 대신 average Pooling을 통해 출력값을 얻는다.
+
+# FPN의 대표 구조 3가지
+
+1.Bottom-up Pathway
