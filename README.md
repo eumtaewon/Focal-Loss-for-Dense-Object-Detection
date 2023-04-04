@@ -44,5 +44,9 @@ ResNet을 통해 객체의 특징을 추출하고 이후의 별도의 모듈을 
 
 ![image](https://user-images.githubusercontent.com/104436260/229718950-646ca4d8-43b9-4649-ab3b-86f915f6c056.png)
 
+# Feature Pyramid Network Backbone
 
+RetinaNet의 backbone network로 FPN을 적용한다. FPN의 구조는 위 그림에서(b)에 해당하는 부분이다.
+
+RetinaNet은 P3에서 P7의 Pyramid Level을 사용한다.
 
