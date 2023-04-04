@@ -50,3 +50,20 @@ RetinaNet의 backbone network로 FPN을 적용한다. FPN의 구조는 위 그�
 
 RetinaNet은 P3에서 P7의 Pyramid Level을 사용한다.
 
+# FPN이란
+
+Feature Pyramid란 다른 크기의 객체를 탐지하기 위한 시스템의 기본 구성 요소라고 생각하면 될 듯 하다.
+
+최근에는 이러한 Pyramid represntation즉 사용을 자제하고 있다고 한다. 연산과 메모리 용량을 많이 차지하기 때문이다.
+
+Resnet-101도 충분히 깊은 모델인데 거기서 나온 특성값을 또 한번 Network에 돌려주니 메모리 문제가 생기긴 할 듯 하다.
+
+하지만 성능 향상에는 큰 도움이 되기 때문에 간략하게 FPN에 대해서 알아보고 넘어가도록 한다.
+
+![image](https://user-images.githubusercontent.com/104436260/229720661-a4e2fb9e-e21f-44c2-a1c6-dcb024380185.png)
+
+1. FPN은 임의의 크기 이미지를 입력 받고 fully convolutional 방법으로 다양한 단계의 적합한 크기의 feature map을 출력한다
+
+여기서 fully convolutional은 모든 레이어가 합성공으로만 이루어진 모델이라고 하는데 마지막에 Fully connected를 해주지 않고
+
+모든 픽셀위치의 출력값을 생성한다는 점이 특징이다. Fully connected 대신 average Pooling을 통해 출력값을 얻는다.
